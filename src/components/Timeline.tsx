@@ -2,23 +2,25 @@ import { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 import PhotoCluster from './PhotoCluster';
 
+const base = import.meta.env.BASE_URL;
+
 const cities = [
   {
     days: 'DAYS 1\u20133',
     name: 'OSAKA',
-    images: ['/images/about-osaka-castle.jpg', '/images/about-osaka-neon.jpg'] as [string, string],
+    images: [`${base}images/about-osaka-castle.jpg`, `${base}images/about-osaka-neon.jpg`] as [string, string],
     rotations: [-2, 3] as [number, number],
   },
   {
     days: 'DAYS 4\u20136',
     name: 'KYOTO',
-    images: ['/images/about-kyoto-pagoda.jpg', '/images/about-kyoto-shrine.jpg'] as [string, string],
+    images: [`${base}images/about-kyoto-pagoda.jpg`, `${base}images/about-kyoto-shrine.jpg`] as [string, string],
     rotations: [3, -2] as [number, number],
   },
   {
     days: 'DAYS 7\u201310',
     name: 'TOKYO',
-    images: ['/images/about-tokyo-shibuya.jpg', '/images/about-tokyo-torii.jpg'] as [string, string],
+    images: [`${base}images/about-tokyo-shibuya.jpg`, `${base}images/about-tokyo-torii.jpg`] as [string, string],
     rotations: [-3, 2] as [number, number],
   },
 ];

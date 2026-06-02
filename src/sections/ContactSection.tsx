@@ -9,7 +9,7 @@ export default function ContactSection() {
       {/* Background Image */}
       <div className="absolute inset-0 z-[1]">
         <img
-          src="/images/contact-sakura.jpg"
+          src={`${import.meta.env.BASE_URL}images/contact-sakura.jpg`}
           alt="Cherry blossoms framing Mount Fuji and a red pagoda at sunrise"
           className="w-full h-full object-cover"
           loading="lazy"

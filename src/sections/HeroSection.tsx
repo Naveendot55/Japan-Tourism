@@ -66,7 +66,7 @@ export default function HeroSection() {
         }}
       >
         <img
-          src="/images/hero-mountains.jpg"
+          src={`${import.meta.env.BASE_URL}images/hero-mountains.jpg`}
           alt="Misty Japanese mountains at dawn"
           className="w-full h-[120%] object-cover object-center"
           style={{ objectPosition: 'center 30%' }}
@@ -78,7 +78,7 @@ export default function HeroSection() {
       {/* Layer 5 — Kimono Figure (highest, no parallax — visual anchor) */}
       <div className="absolute bottom-0 right-[5%] lg:right-[8%] z-[5] w-[45%] sm:w-[35%] lg:w-[28%] max-w-[400px]">
         <img
-          src="/images/hero-kimono.png"
+          src={`${import.meta.env.BASE_URL}images/hero-kimono.png`}
           alt="Woman in floral kimono gazing at the valley"
           className="w-full h-auto object-contain"
           style={{ filter: 'drop-shadow(0 4px 20px rgba(0,0,0,0.3))' }}

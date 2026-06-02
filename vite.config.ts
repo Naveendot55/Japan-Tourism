@@ -5,7 +5,7 @@ import { inspectAttr } from 'kimi-plugin-inspect-react'
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: './Japan-Tourism/',
+  base: '/Japan-Tourism/',
   plugins: [inspectAttr(), react()],
   server: {
     port: 3000,

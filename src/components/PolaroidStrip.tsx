@@ -1,11 +1,13 @@
 import PolaroidCard from './PolaroidCard';
 
+const base = import.meta.env.BASE_URL;
+
 const cards = [
-  { videoSrc: '/videos/polaroid-pagoda.mp4', caption: '3 cities in Japan', rotation: -2 },
-  { videoSrc: '/videos/polaroid-rice.mp4', caption: '10 days', rotation: 1.5 },
-  { videoSrc: '/videos/polaroid-shrine.mp4', caption: 'gigabytes of photos', rotation: -1 },
-  { videoSrc: '/videos/polaroid-ramen.mp4', caption: 'eat ramen', rotation: 2 },
-  { videoSrc: '/videos/polaroid-shinjuku.mp4', caption: 'enjoy the vibe', rotation: -1.5 },
+  { videoSrc: `${base}videos/polaroid-pagoda.mp4`, caption: '3 cities in Japan', rotation: -2 },
+  { videoSrc: `${base}videos/polaroid-rice.mp4`, caption: '10 days', rotation: 1.5 },
+  { videoSrc: `${base}videos/polaroid-shrine.mp4`, caption: 'gigabytes of photos', rotation: -1 },
+  { videoSrc: `${base}videos/polaroid-ramen.mp4`, caption: 'eat ramen', rotation: 2 },
+  { videoSrc: `${base}videos/polaroid-shinjuku.mp4`, caption: 'enjoy the vibe', rotation: -1.5 },
 ];
 
 export default function PolaroidStrip() {
