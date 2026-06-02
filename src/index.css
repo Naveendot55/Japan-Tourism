@@ -1,0 +1,140 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 4%;
+    --foreground: 0 0% 98%;
+    --card: 0 0% 4%;
+    --card-foreground: 0 0% 98%;
+    --popover: 0 0% 4%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 0 0% 98%;
+    --primary-foreground: 0 0% 4%;
+    --secondary: 0 0% 10%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 0 0% 10%;
+    --muted-foreground: 0 0% 53%;
+    --accent: 78 90% 73%;
+    --accent-foreground: 0 0% 4%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 15%;
+    --input: 0 0% 15%;
+    --ring: 78 90% 73%;
+    --radius: 0.625rem;
+  }
+
+  html {
+    scroll-behavior: auto;
+  }
+
+  body {
+    @apply bg-mist-black text-kimono-white font-inter;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+  }
+
+  /* Hide system cursor on devices with a pointer (desktop) */
+  @media (hover: hover) and (pointer: fine) {
+    html, body {
+      cursor: none;
+    }
+    a, button, [role="button"], input, textarea, select, label {
+      cursor: none;
+    }
+  }
+
+  ::selection {
+    background-color: rgba(212, 248, 122, 0.3);
+    color: #FAFAFA;
+  }
+}
+
+@layer components {
+  .text-display-xl {
+    font-family: 'Anton', Impact, sans-serif;
+    font-size: clamp(100px, 18vw, 280px);
+    line-height: 0.85;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+  }
+
+  .text-display-l {
+    font-family: 'Anton', Impact, sans-serif;
+    font-size: clamp(48px, 8vw, 96px);
+    line-height: 0.9;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+  }
+
+  .text-editorial {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-weight: 300;
+    font-size: clamp(28px, 4vw, 48px);
+    line-height: 1.2;
+  }
+
+  .text-small-caps {
+    font-family: 'Inter', system-ui, sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+  }
+
+  .hairline {
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+
+  .hairline-bright {
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+
+  .glass-surface {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+
+  .glass-frost {
+    background: rgba(20, 20, 20, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+  }
+}
+
+@layer utilities {
+  .text-stroke-white {
+    -webkit-text-stroke: 2px rgba(250, 250, 250, 0.6);
+    -webkit-text-fill-color: transparent;
+    paint-order: stroke fill;
+  }
+
+  /* JAPAN hero text — semi-transparent fill so it reads well behind the sky gradient */
+  .text-japan-hero {
+    -webkit-text-stroke: 2px rgba(250, 250, 250, 0.5);
+    -webkit-text-fill-color: rgba(250, 250, 250, 0.12);
+    paint-order: stroke fill;
+  }
+
+  .will-change-transform {
+    will-change: transform;
+  }
+}
+
+/* Accessibility: respect prefers-reduced-motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
